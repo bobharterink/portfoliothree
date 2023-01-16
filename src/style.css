@@ -7,10 +7,15 @@ html,
 body {
   scroll-behavior: smooth;
   height: 100vh;
-  font-family: "favorit";
+  font-family: Favorit1;
   background: rgb(235, 235, 235);
   scroll-snap-type: y mandatory;
   /* overflow-x: hidden; */
+}
+
+@font-face {
+  font-family: Favorit1;
+  src: url(favorit-medium-webfont.woff);
 }
 
 .webgl {
