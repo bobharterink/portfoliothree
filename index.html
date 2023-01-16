@@ -23,18 +23,17 @@
   <div class="canvas" id="shlian">
     <canvas class="shilian"></canvas>
   </div>
-  <!--     <div class="canvas" id="imageshlian">
+      <div class="canvas" id="imageshlian">
         <div class="w3-content w3-display-container">
-            <img class="mySlides" src="../blenderimg/shlian1.png" style="width:100%">
-            <img class="mySlides" src="../blenderimg/shlian2.png" style="width:100%">
-            <img class="mySlides" src="../blenderimg/shlian1.png" style="width:100%">
-            <img class="mySlides" src="../blenderimg/shlian2.png" style="width:100%">
+            <img class="mySlides" src="/shlian2.jpg">
+            <img class="mySlides" src="/shlian1.jpg">
+            <img class="mySlides" src="/shlian3.jpg">
+            <img class="mySlides" src="/shlian4.jpg">
           
             <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
             <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
         </div>
-    </div> -->
-  <!-- <img src="/shlian1.png" alt=""> -->
+    </div>
   <div class="canvas" id="textshlian">
     <h2>Geometrische golfen</h2>
     <h3>Elk afzonderlijke piramide is vanuit een vel papier met de hand dicht gevouwen en vervolgens op een canvas geplakt. Het werk bestaat uit meer dan 600 piramides. De top van de piramide verschuift na iedere diagonale lijn een bepaald stuk. Hierdoor krijg je de golvende lijn in het werk. Dit werk is gemaakt vanuit A4 vellen papier die zijn uitgesneden door een laser cut apparaat. Het is afgeleid van een kunstenaar die zich ook veel met origami bezighoudt genaamd Matthew Shlian. Dit werk heeft heel wat versies gehad. Het is in het klein begonnen met 9 stuks, en later uitgebreid met verschillende grote van piramides, andere kleuren en andere figuren. Uiteindelijk is dit het eindresultaat tot nu toe. Die ook echt bestaat. Misschien volgen later meerdere werken in deze stijl.</h3>
@@ -43,6 +42,19 @@
   <div class="canvas" id="vaas">
     <canvas class="vaas"></canvas>
   </div>
+
+  <div class="canvas" id="imagevaas">
+    <div class="w3-content w3-display-container">
+        <img class="mySlides2" src="/vaas1.jpg">
+        <img class="mySlides2" src="/vaas2.jpg">
+        <img class="mySlides2" src="/vaas3.jpg">
+        <img class="mySlides2" src="/vaas4.jpg">
+      
+        <button class="w3-button w3-black w3-display-left" onclick="vaasveder(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="vaasverder(1)">&#10095;</button>
+    </div>
+  </div>
+
   <div class="canvas" id="textvaas">
     <h2>Houten Vaas</h2>
     <h3>De houten vaas is gemaakt uit MDF. Dit is een project dat een vervolg is op de geometrische golfen. De houten
@@ -56,6 +68,18 @@
   <div class="canvas" id="vrouw">
     <canvas class="vrouw"></canvas>
   </div>
+
+  <div class="canvas" id="imagevrouw">
+    <div class="w3-content w3-display-container">
+        <img class="mySlides3" src="/vrouw1.jpg">
+        <img class="mySlides3" src="/vrouw2.jpg">
+        <img class="mySlides3" src="/vrouw3.jpg">
+      
+        <button class="w3-button w3-black w3-display-left" onclick="vrouwverder(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="vrouwverder(1)">&#10095;</button>
+    </div>
+  </div>
+
   <div class="canvas" id="textvrouw">
     <h2>Frauw</h2>
     <h3>Frauw is een project waar ik al langer aan bezig ben. Het is een grafisch project waarbij ik een aantal vrouwen
@@ -69,6 +93,19 @@
   <div class="canvas" id="wit">
     <canvas class="schilder"></canvas>
   </div>
+
+  <div class="canvas" id="imagewit">
+    <div class="w3-content w3-display-container">
+        <img class="mySlides4" src="/object1.jpg">
+        <img class="mySlides4" src="/object2.jpg">
+        <img class="mySlides4" src="/object3.jpg">
+        <img class="mySlides4" src="/object4.jpg">
+      
+        <button class="w3-button w3-black w3-display-left" onclick="objectverder(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="objectverder(1)">&#10095;</button>
+    </div>
+  </div>
+
   <div class="canvas" id="textwit">
     <h2>Object</h2>
     <h3>Dit figuur is de laatste ontwikkeling die is gemaakt met een laser cut apparaat. Dit is een project dat in de
@@ -86,6 +123,7 @@
       mij focussen op het maken van objecten aan de hand van een 2D programma als illustrator, waarnaar ik vervolgens
       dit in een 3D programma als Blender tot een object maak. En vervolgens het in het echt ga vervaardigen.
       <br>
+      <br>
       Bob Harterink – Grafisch vormgeving BA3
     </h3>
   </div>
@@ -102,7 +140,7 @@
     }
   </script>
 
-  <!-- <script>
+  <script>
     var slideIndex = 1;
     showDivs(slideIndex);
 
@@ -120,7 +158,70 @@
       }
       x[slideIndex - 1].style.display = "block";
     }
-  </script> -->
+  </script>
+
+<script>
+  var slideIndex2 = 1;
+  showDivs2(slideIndex2);
+
+  function vaasverder(n) {
+    showDivs2(slideIndex2 += n);
+  }
+
+  function showDivs2(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides2");
+    if (n > x.length) { slideIndex2 = 1 }
+    if (n < 1) { slideIndex2 = x.length }
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    x[slideIndex2 - 1].style.display = "block";
+  }
+</script>
+
+<script>
+  var slideIndex3 = 1;
+  showDivs3(slideIndex3);
+
+  function vrouwverder(n) {
+    showDivs3(slideIndex3 += n);
+  }
+
+  function showDivs3(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides3");
+    if (n > x.length) { slideIndex3 = 1 }
+    if (n < 1) { slideIndex3 = x.length }
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    x[slideIndex3 - 1].style.display = "block";
+  }
+</script>
+
+<script>
+  var slideIndex4 = 1;
+  showDivs4(slideIndex4);
+
+  function objectverder(n) {
+    showDivs4(slideIndex4 += n);
+  }
+
+  function showDivs4(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides4");
+    if (n > x.length) { slideIndex4 = 1 }
+    if (n < 1) { slideIndex4 = x.length }
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    x[slideIndex4 - 1].style.display = "block";
+  }
+</script>
+
+
+
   <script>
     const element8 = document.querySelector('#textover');
     const element9 = document.querySelector('.menubutton');

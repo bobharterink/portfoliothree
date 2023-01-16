@@ -1,4 +1,5 @@
 import './style.css'
+import './w3.css'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import * as dat from 'dat.gui'
@@ -63,7 +64,7 @@ scene4.add(objectGroup4);
 
 // Shillian
 gltfLoader.load('shlian2.gltf', (gltf) =>{
-    gltf.scene.scale.set(3,3,3)
+    gltf.scene.scale.set(2,2,2)
     objectGroup.add(gltf.scene)
 })
 
