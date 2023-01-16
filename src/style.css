@@ -234,7 +234,7 @@ span {
     img {
       transform: scale(0.3);
     }
-    .center {
+    .w3-content, .w3-display-container {
       display: flex;
       justify-content: center;
       align-items: center;
