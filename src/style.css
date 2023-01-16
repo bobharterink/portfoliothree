@@ -224,3 +224,58 @@ span {
 .w3-content {
   height: 100%;
 }
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+    img {
+      width: 100%;
+
+    }
+    h2 {
+      text-align: left;
+      font-size: 40px;
+      padding-bottom: 17px;
+    }
+    
+    h3 {
+      text-align: left;
+      font-size: 20px;
+    }
+    #textshlian {
+      display: table-cell;
+      vertical-align: middle;
+      padding-left: 10vw;
+      padding-right: 10vw;
+    }
+    
+    #textvaas {
+      display: table-cell;
+      vertical-align: middle;
+      padding-left: 10vw;
+      padding-right: 10vw;
+    }
+    
+    #textvrouw {
+      display: table-cell;
+      vertical-align: middle;
+      padding-left: 10vw;
+      padding-right: 10vw;
+    }
+    
+    #textwit {
+      display: table-cell;
+      vertical-align: middle;
+      padding-left: 10vw;
+      padding-right: 10vw;
+    }
+    
+    #textover {
+      display: table-cell;
+      vertical-align: middle;
+      padding-left: 10vw;
+      padding-right: 10vw;
+      background-color: black;
+    }
+}
