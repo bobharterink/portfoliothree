@@ -7,15 +7,10 @@ html,
 body {
   scroll-behavior: smooth;
   height: 100vh;
-  font-family: Favorit1;
+  font-family: 'Roboto', sans-serif;
   background: rgb(235, 235, 235);
   scroll-snap-type: y mandatory;
   /* overflow-x: hidden; */
-}
-
-@font-face {
-  font-family: Favorit1;
-  src: url(favorit-medium-webfont.woff);
 }
 
 .webgl {
