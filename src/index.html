@@ -3,9 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ThreeJS Starter</title>
+    <title>Portfolio Bob Harterink</title>
+    <script src="https://unpkg.com/three" ></script>
+    <script src="https://unpkg.com/three@0.85.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://unpkg.com/three@0.85.0/examples/js/loaders/GLTFLoader.js" ></script>
+    <script src="/src/script.js" ></script>
+    <link rel="stylesheet" href="/src/style.css">
 </head>
 <body>
-    <canvas class="webgl"></canvas>
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+          <a href="#shlian" onclick="closeNav()">Shlian</a>
+          <a href="#vaas" onclick="closeNav()">Vaas</a>
+          <a href="#vrouw" onclick="closeNav()">Frauw</a>
+          <a href="#wit" onclick="closeNav()">Tim</a>
+          <a href="#textover" onclick="closeNav()">Over</a>
+        </div>
+    </div>
+
+      <span class="menubutton" style="font-size:40px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    <div class="canvas" id="shlian">
+            <canvas class="shilian"></canvas>
+    </div>
+<!--     <div class="canvas" id="imageshlian">
+        <div class="w3-content w3-display-container">
+            <img class="mySlides" src="../blenderimg/shlian1.png" style="width:100%">
+            <img class="mySlides" src="../blenderimg/shlian2.png" style="width:100%">
+            <img class="mySlides" src="../blenderimg/shlian1.png" style="width:100%">
+            <img class="mySlides" src="../blenderimg/shlian2.png" style="width:100%">
+          
+            <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+    </div> -->
+<!-- <img src="/shlian1.png" alt=""> -->
+    <div class="canvas" id="textshlian">
+            <h2>Geometrische golfen</h2>
+            <h3>Elk afzonderlijke piramide is vanuit een vel papier met de hand dicht gevouwen en vervolgens op een canvas geplakt. Het werk bestaat uit meer dan 600 piramides. De top van de piramide verschuift na iedere diagonale lijn een bepaald stuk. Hierdoor krijg je de golvende lijn in het werk. Dit werk is gemaakt vanuit A4 vellen papier die zijn uitgesneden door een laser cut apparaat. Het is afgeleid van een kunstenaar die zich ook veel met origami bezighoudt genaamd Matthew Shlian.</h3>
+    </div>
+
+    <div class="canvas" id="vaas">
+        <canvas class="vaas"></canvas>
+    </div>
+    <div class="canvas" id="textvaas">
+            <h2>Houten Vaas</h2>
+            <h3>De houten vaas is gemaakt uit MDF. Dit is een project dat een vervolg is op de geometrische golfen. De houten stukken zijn uitgesneden door een laser cut apparaat. De vaas bestaat uit 3 onderdelen. De ronde onderkant met daaruit stukken gesneden waardoor de zei vlakken erin gestoken kunnen worden. En de bovenste cirkel met een gat in het midden zodat er een glazen vaas in past. Beide cirkels zijn er schuine uitsnede gemaakt waar de vlakken hout ingeschoven kunnen worden. Hierdoor krijgt het een effect alsof het een geheel is. Dit is een van de prototype vazen. Er zijn meerdere formaten, stijlen en kleuren.</h3>
+    </div>
+
+    <div class="canvas" id="vrouw">
+        <canvas class="vrouw"></canvas>
+    </div>
+    <div class="canvas" id="textvrouw">
+            <h2>Frauw</h2>
+            <h3>Frauw is een project waar ik al langer aan bezig ben. Het is een grafisch project waarbij ik een aantal vrouwen heb willen laten zien aan de hand van verticale lijnen en in maar een beperkt aantal kleuren. Het project startte met foto’s van het internet die ik veranderde in deze stijl van afbeeldingen. Nu probeer ik zelf de foto’s te nemen om zo een interessante compositie te creëren. Dit project heb ik de naam FRAUW gegeven. Deze posters komen binnenkort online te staan op de website. Nu hang ik de posters af en toe op in de het centrum van Antwerpen. </h3>
+    </div>
+
+    <div class="canvas" id="wit">
+        <canvas class="schilder"></canvas>
+    </div>
+    <div class="canvas" id="textwit">
+            <h2>Object</h2>
+            <h3>Dit figuur is de laatste ontwikkeling die is gemaakt met een laser cut apparaat. Dit is een project dat in de kinderschoenen staat, hieruit kunnen nog verschillende vormen en objecten gemaakt worden. Het is een iteratie op een werk van Tim de Wit die MDF-planken heeft uitgesneden tot een verticaal op elkaar stapelde tafel. Dit is het eerste object dat ik heb gemaakt. Uiteindelijk zou ik er ook een vaasvorm van willen maken. Alle laser cut projecten zijn vervaardigd met Illustrator.</h3>
+    </div>
+<div></div>
+    <div class="canvas" id="textover">
+        <h2 id="inverttitle">Over</h2>
+        <h3 id="inverttext">Dit is een portfolio website die ik zelf heb gemaakt met behulp van verschillende codeer talen. De vormen zijn gemaakt in Blender, en tot leven gebracht met Three.js. De projecten zijn werken uit de afgelopen anderhalf jaar waar ik me mee bezig heb gehouden. Dit zijn de hoofdonderwerpen waar ik me op heb gefocust. Ik wil mij focussen op het maken van objecten aan de hand van een 2D programma als illustrator, waarnaar ik vervolgens dit in een 3D programma als Blender tot een object maak. En vervolgens het in het echt ga vervaardigen.  
+<br>
+            Bob Harterink – Grafisch vormgeving BA3 
+            </h3>
+    </div>
+
+    <script>
+function openNav() {
+  document.getElementById("myNav").style.height = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+}
+        </script>
+
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+    
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+    
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      x[slideIndex-1].style.display = "block";  
+    }
+    </script>
+    <script>
+        const element8 = document.querySelector('#textover');
+        const element9 = document.querySelector('.menubutton');
+        const observer6 = new IntersectionObserver(entries => { element9.classList.toggle( 'animation5', entries[0].isIntersecting );
+        },{
+            rootMargin: "-100px",
+            delay: 1000,
+        }
+        );
+        observer6.observe( element8 );
+    </script>
 </body>
 </html>
