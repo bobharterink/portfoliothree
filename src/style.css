@@ -10,7 +10,7 @@ body {
   font-family: 'Roboto', sans-serif;
   background: rgb(235, 235, 235);
   scroll-snap-type: y mandatory;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 .webgl {
