@@ -1,51 +1,52 @@
-*
-{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 html,
-body
-{
-    scroll-behavior: smooth;
-    height: 100vh;
-    font-family: 'favorit';
-    background: rgb(235, 235, 235);
-    scroll-snap-type: y mandatory;
+body {
+  scroll-behavior: smooth;
+  height: 100vh;
+  font-family: "favorit";
+  background: rgb(235, 235, 235);
+  scroll-snap-type: y mandatory;
 }
 
-.webgl
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-    outline: none;
+.webgl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  outline: none;
 }
 
 h1 {
-    position: relative;
-    bottom: 50%;
-    left: 50%;
-    opacity: 0;
-    animation-name: shove;
-    animation-duration: 2s;
-    animation-delay: 4.1s;
-    animation-fill-mode: forwards;
-   }
-   
+  position: relative;
+  bottom: 50%;
+  left: 50%;
+  opacity: 0;
+  animation-name: shove;
+  animation-duration: 2s;
+  animation-delay: 4.1s;
+  animation-fill-mode: forwards;
+}
+
 @keyframes shove {
-    from {opacity: 0;}
-    to {opacity: 100;}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
 }
 
 video {
-    height: 100vh;
-    width: 100vw;
+  height: 100vh;
+  width: 100vw;
 }
 
 source {
-    height: 100vh;
-    width: 100vw;
+  height: 100vh;
+  width: 100vw;
 }
 
 /* canvas.shilian {
@@ -89,138 +90,131 @@ canvas.textschilder {
 } */
 
 .canvas {
-    height: 100vh;
-    width: 100vw;
-    background-color: white;
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
 }
 
 .canvas {
-    scroll-snap-align: start;
+  scroll-snap-align: start;
 }
 
 #textshlian {
-    display: table-cell;
-    vertical-align: middle;
-    padding-left: 20vw;
-    padding-right: 20vw;
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 20vw;
+  padding-right: 20vw;
 }
 
 #textvaas {
-    display: table-cell;
-    vertical-align: middle;
-    padding-left: 20vw;
-    padding-right: 20vw;
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 20vw;
+  padding-right: 20vw;
 }
 
 #textvrouw {
-    display: table-cell;
-    vertical-align: middle;
-    padding-left: 20vw;
-    padding-right: 20vw;
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 20vw;
+  padding-right: 20vw;
 }
 
 #textwit {
-    display: table-cell;
-    vertical-align: middle;
-    padding-left: 20vw;
-    padding-right: 20vw;
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 20vw;
+  padding-right: 20vw;
 }
 
 #textover {
-    display: table-cell;
-    vertical-align: middle;
-    padding-left: 20vw;
-    padding-right: 20vw;
-    background-color: black;
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 20vw;
+  padding-right: 20vw;
+  background-color: black;
 }
 
 h2 {
-    text-align: center;
-    font-size: xxx-large;
+  text-align: center;
+  font-size: xxx-large;
 }
 
 h3 {
-    text-align: left;
-    font-size: x-large;
+  text-align: left;
+  font-size: x-large;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 .overlay {
-    height: 0%;
-    width: 100%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.9);
-    overflow-y: hidden;
-    transition: 0.5s;
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 2px;
+  right: 20px;
+  font-size: 40px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {
+    overflow-y: auto;
   }
-  
-  .overlay-content {
-    position: relative;
-    top: 25%;
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
-  }
-  
   .overlay a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 36px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
+    font-size: 20px;
   }
-  
-  .overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
-  }
-  
   .overlay .closebtn {
-    position: absolute;
-    top: 2px;
-    right: 20px;
-    font-size: 40px;
-  }
-  
-  @media screen and (max-height: 450px) {
-    .overlay {overflow-y: auto;}
-    .overlay a {font-size: 20px}
-    .overlay .closebtn {
     font-size: 40px;
     top: 15px;
     right: 35px;
-    }
   }
+}
 
-  span {
-    position: fixed; 
-    margin-left: 20px;
-    margin-top: 10px; 
-    }  
+span {
+  position: fixed;
+  margin-left: 20px;
+  margin-top: 10px;
+}
 
-    #inverttitle {
-        color: white;
-    }
+#inverttitle {
+  color: white;
+}
 
-    #inverttext {
-        color: white;
-    }
+#inverttext {
+  color: white;
+}
 
-    .animation5 {
-        color: white;
-    }
+.animation5 {
+  color: white;
+}
